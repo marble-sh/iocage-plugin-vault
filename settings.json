@@ -1,0 +1,15 @@
+{
+  "servicerestart": "service vault restart",
+  "serviceget": "/usr/local/bin/vaultget.sh",
+  "serviceset": "/usr/local/bin/vaultset.sh",
+  "options": {
+    "port": {
+      "type": "int",
+      "name": "Vault API Port",
+      "description": "Port for incoming Vault connections",
+      "range": "1024-32000",
+      "default": "8200",
+      "requirerestart": true
+    }
+  }
+}
