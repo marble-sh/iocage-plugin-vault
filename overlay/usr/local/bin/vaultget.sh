@@ -4,7 +4,7 @@ file="/usr/local/etc/vault.json"
 
 case $1 in
 "port")
-  jq ".listener[].tcp.address" "$file"
+  jq -r ".listener[].tcp.address" "$file" | awk -F':' '{print $2}'
   ;;
 *)
   echo "Unknown option" >&2
