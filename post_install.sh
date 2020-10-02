@@ -9,3 +9,4 @@ chown vault:vault /vault-data /usr/local/etc/vault.json
 chmod +x /usr/local/bin/vaultget.sh /usr/local/bin/vaultset.sh
 pw usermod -L daemon -n vault
 cap_mkdb /etc/login.conf
+service vault start
